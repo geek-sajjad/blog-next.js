@@ -51,11 +51,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  twitter: {
-    title: siteMetadata.title,
-    card: 'summary_large_image',
-    images: [siteMetadata.socialBanner],
-  },
+  // twitter: {
+  //   title: siteMetadata.title,
+  //   card: 'summary_large_image',
+  //   images: [siteMetadata.socialBanner],
+  // },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -96,12 +96,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-          <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
+          {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
           <SectionContainer>
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="mb-auto">{children}</main>
-            </SearchProvider>
+            <Header />
+            <main className="mb-auto">{children}</main>
+            {/* <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+
+            </SearchProvider> */}
             <Footer />
           </SectionContainer>
         </ThemeProviders>
