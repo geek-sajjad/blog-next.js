@@ -1,0 +1,13 @@
+kind: wasmer.io/App.v0
+name: blog-nextjs-e9f39
+owner: geek-sajjad
+package: sha256:9b66bc97ddfca46f3982808b19f94bf6c26cc3c994e670fe68b5f98a1e204b77
+cli_args:
+- '--root'
+- out
+- '--directory-listing'
+- 'true'
+- '--port'
+- '80'
+- '--host'
+- '::'
